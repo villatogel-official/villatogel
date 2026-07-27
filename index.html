@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VILLATOGEL - Landing Page</title>
-    <!-- Mengambil font bergaya futuristic dari Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
     <style>
         * {
             box-sizing: border-box;
@@ -15,6 +14,200 @@
         }
 
         body {
-            background-color: #050808;
-            color: #00f0ff;
-            display
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #050b14;
+            padding: 10px;
+            color: #ffffff;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 400px;
+            border: 3px solid #00ffff;
+            border-radius: 20px;
+            padding: 20px 10px;
+            background: #020813;
+            box-shadow: 0 0 20px #00ffff;
+            text-align: center;
+        }
+
+        .icon-globe {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 10px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon-globe svg {
+            width: 100%;
+            height: 100%;
+            fill: #00ffff;
+            filter: drop-shadow(0 0 8px #00ffff);
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #00ffff;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #00ffff;
+            margin-bottom: 20px;
+        }
+
+        .btn-large {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 14px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cyan {
+            background-color: transparent;
+            color: #00ffff;
+            border: 2px solid #00ffff;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .btn-wa {
+            background-color: transparent;
+            color: #25D366;
+            border: 2px solid #25D366;
+            box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            width: 90%;
+            margin: 20px auto;
+        }
+
+        .stat-box {
+            border: 2px solid #00ffff;
+            border-radius: 5px;
+            padding: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+        }
+
+        .stat-label {
+            color: #00ffff;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            color: #ffffff;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .info-table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-size: 12px;
+            text-align: left;
+        }
+
+        .info-table td {
+            padding: 8px 5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info-table td:first-child {
+            color: #00ffff;
+            text-transform: uppercase;
+            width: 40%;
+        }
+
+        .info-table td:last-child {
+            color: #ffffff;
+            font-weight: 700;
+            text-align: right;
+        }
+
+        footer {
+            font-size: 9px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <div class="icon-globe">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+        </svg>
+    </div>
+    <h1>VILLATOGEL</h1>
+
+    <a href="https://villamakmur.site/register?referral_code=jp77" target="_blank" class="btn-large btn-cyan">KLIK UNTUK LOGIN</a>
+    <a href="https://villamakmur.site/register?referral_code=jp77" target="_blank" class="btn-large btn-cyan">KLIK UNTUK DAFTAR</a>
+    <a href="https://villamakmur.site/register?referral_code=jp77" target="_blank" class="btn-large btn-cyan">LINK ALTERNATIF</a>
+    <a href="https://chat.whatsapp.com/L7mVGI2Vl0hKWIKUBxyZNI?s=cl&p=a&ilr=1&amv=3" target="_blank" class="btn-large btn-wa">GROUP WHATSAPP</a>
+
+    <div class="stats-grid">
+        <div class="stat-box">
+            <span class="stat-label">RATING</span>
+            <span class="stat-value" style="color: #FFD700;">★★★★★</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">DEPO</span>
+            <span class="stat-value">10 RIBU</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">WIN RATE</span>
+            <span class="stat-value">99%</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">WEDE</span>
+            <span class="stat-value">50 RIBU</span>
+        </div>
+    </div>
+
+    <table class="info-table">
+        <tr>
+            <td>NAMA SITUS</td>
+            <td>VILLATOGEL</td>
+        </tr>
+        <tr>
+            <td>MIN BETTING</td>
+            <td>Rp 100</td>
+        </tr>
+        <tr>
+            <td>BONUS</td>
+            <td>BONUS X-TRA New Member 10%</td>
+        </tr>
+        <tr>
+            <td>DEPOSIT</td>
+            <td>QRIS, EWALLET, BANK</td>
+        </tr>
+    </table>
+
+    <footer>
+        © 2026 SEO OKEM | VILLATOGEL
+    </footer>
+</div>
+
+</body>
+    </html>
