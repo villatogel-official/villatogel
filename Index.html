@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VILLATOGEL - Landing Page</title>
+    <!-- Mengambil font bergaya futuristic dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        body {
+            background-color: #050808;
+            color: #00f0ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Kontainer Utama ala Smartphone Frame */
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: #0a1010;
+            border: 2px solid #00f0ff;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Logo / Header */
+        .logo-container {
+            margin-bottom: 15px;
+        }
+        .logo-container h1 {
+            font-size: 20px;
+            letter-spacing: 2px;
+            color: #00f0ff;
+            margin-top: 5px;
+            text-shadow: 0 0 8px rgba(0, 240, 255, 0.6);
+        }
+
+        /* Tombol Aksi Utama (Login, Daftar, Alternatif) */
+        .btn-primary {
+            display: block;
+            width: 100%;
+            background: #00f0ff;
+            color: #050808;
+            font-weight: bold;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+            transition: 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+        }
+
+        .btn-outline {
+            display: block;
+            width: 100%;
+            background: transparent;
+            color: #00f0ff;
+            border: 2px solid #00f0ff;
+            font-weight: bold;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 1px;
+            box-shadow: inset 0 0 8px rgba(0, 240, 255, 0.2);
+        }
+
+        /* Grid Statistik (Rating, Depo, Winrate, Wede) */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .stat-box {
+            background: #070d0d;
+            border: 1px solid #00f0ff;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stat-box span.value {
+            color: #fff;
+            font-weight: bold;
+        }
+
+        /* Tabel Informasi Detail */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: #070d0d;
+            border: 1px solid #00f0ff;
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 11px;
+            text-align: left;
+        }
+
+        .info-table td {
+            padding: 10px;
+            border-bottom: 1px solid rgba(0, 240, 255, 0.2);
+        }
+
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .info-label {
+            color: #00f0ff;
+            width: 40%;
+        }
+
+        .info-value {
+            color: #fff;
+            width: 60%;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 15px;
+            font-size: 10px;
+            color: #789;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Logo -->
+        <div class="logo-container">
+            <div style="font-size: 24px;">🌐</div>
+            <h1>VILLATOGEL</h1>
+        </div>
+
+        <!-- Tombol Menu Utama -->
+        <a href="#" class="btn-primary">KLIK UNTUK LOGIN</a>
+        <a href="https://villamakmur.site/register?referral_code=jp77" class="btn-outline">KLIK UNTUK DAFTAR</a>
+        <a href="https://villamakmur.site/register?referral_code=jp77" class="btn-outline">LINK ALTERNATIF</a>
+
+        <!-- Kotak Statistik Ringkas -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span>RATING</span>
+                <span class="value" style="color: #ffd700;">★★★★★</span>
+            </div>
+            <div class="stat-box">
+                <span>DEPO</span>
+                <span class="value">10 RIBU</span>
+            </div>
+            <div class="stat-box">
+                <span>WIN RATE</span>
+                <span class="value">99%</span>
+            </div>
+            <div class="stat-box">
+                <span>WEDE</span>
+                <span class="value">50 RIBU</span>
+            </div>
+        </div>
+
+        <!-- Tabel Informasi Lengkap -->
+        <table class="info-table">
+            <tr>
+                <td class="info-label">NAMA SITUS</td>
+                <td class="info-value">VILLATOGEL</td>
+            </tr>
+            <tr>
+                <td class="info-label">MIN BETTING</td>
+                <td class="info-value">Rp 100</td>
+            </tr>
+            <tr>
+                <td class="info-label">BONUS</td>
+                <td class="info-value">BONUS X-TRA New Member 10%</td>
+            </tr>
+            <tr>
+                <td class="info-label">DEPOSIT</td>
+                <td class="info-value">QRIS, EWALLET, BANK</td>
+            </tr>
+        </table>
+
+        <!-- Footer -->
+        <footer>
+            &copy; 2026 SEO OKEM | VILLATOGEL
+        </footer>
+    </div>
+
+</body>
+  </html>
