@@ -21,17 +21,16 @@
             background-color: #0d1117;
             color: #fff;
             text-align: center;
+            padding-bottom: 40px;
         }
 
-        /* Styling Header / Logo Atas */
+        /* Styling Header Logo Atas */
         .site-header {
             width: 100%;
             background-color: #161b22;
             padding: 15px 10px;
             border-bottom: 2px solid #d4af37;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin-bottom: 20px;
         }
 
         .header-logo {
@@ -40,29 +39,32 @@
             margin: 0 auto;
         }
 
-        /* Container Banner Utama */
+        /* Container Card Banner Utama */
         .banner-container {
             max-width: 800px;
-            margin: 20px auto;
+            margin: 0 auto;
             border: 1px solid #d4af37;
             border-radius: 12px;
             overflow: hidden;
             background-color: #0a0e17;
-            padding-bottom: 25px;
+            padding: 15px;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
         }
 
-        /* Styling Gambar Banner Tengah */
+        /* Area Gambar Banner */
         .main-banner-img {
             width: 100%;
             display: block;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
-        /* Tombol Daftar */
+        /* Tombol Daftar Sekarang */
         .cta-button {
             display: inline-block;
             margin-top: 20px;
             background: linear-gradient(180deg, #ffd700 0%, #ff8c00 100%);
-            padding: 14px 35px;
+            padding: 14px 40px;
             border-radius: 25px;
             color: #000;
             text-decoration: none;
@@ -70,22 +72,28 @@
             font-size: 18px;
             border: 2px solid #fff;
             box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.03);
         }
     </style>
 </head>
 <body>
 
-    <!-- LOGO BAGIAN ATAS (HEADER) -->
+    <!-- LOGO ATAS -->
     <header class="site-header">
-        <div class="header-logo"> <amp-img src="e0ce4738b31ffb7c36d8d25641fb6718.jpeg" width="720" height="720" layout="responsive" alt="Situs Slot Togel Resmi"></amp-img> 
+        <div class="header-logo">
+            <amp-img src="logo.png" width="250" height="70" layout="intrinsic" alt="Villa Togel Logo"></amp-img>
         </div>
     </header>
 
-    <!-- KONTEN UTAMA BANNER -->
+    <!-- BANNER DAN TOMBOL -->
     <main class="banner-container">
-        <!-- GAMBAR BANNER UTAMA -->
+        <!-- Gambar Banner Promo Utama -->
         <div class="main-banner-img">
-            <amp-img src="banner.png" width="800" height="450" layout="responsive" alt="Situs Slot Togel Resmi"></amp-img>
+            <amp-img src="e0ce4738b31ffb7c36d8d25641fb6718.jpeg" width="720" height="720" layout="responsive" alt="Situs Slot Togel Resmi"></amp-img>
         </div>
 
         <!-- Tombol Daftar -->
@@ -93,4 +101,4 @@
     </main>
 
 </body>
-</html>
+    </html>
