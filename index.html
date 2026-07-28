@@ -1,152 +1,285 @@
-<!doctype html>
-<html ⚡ lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-    <meta charset="utf-8">
-    <title>Villa Togel - Situs Slot & Togel Resmi</title>
-    <link rel="canonical" href="https://villatogel1.site/register?referral_code=jp77">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Script Wajib AMP -->
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-
-    <style amp-custom>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villatogel - Pusat Toto Togel Online</title>
+    <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
 
         body {
-            background-color: #0d1117;
-            color: #fff;
-            text-align: center;
-            padding-bottom: 40px;
-        }
-
-        /* Styling Header Logo Atas */
-        .site-header {
-            width: 100%;
-            background-color: #161b22;
-            padding: 15px 10px;
-            border-bottom: 2px solid #d4af37;
-            margin-bottom: 20px;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-        }
-
-        .header-logo {
-            width: 100%;
-            max-width: 250px;
-            margin: 0 auto;
-        }
-
-        /* Container Card Banner Utama + Efek Glowing Border */
-        .banner-container {
-            max-width: 800px;
-            margin: 0 auto;
-            border: 2px solid #ffd700;
-            border-radius: 12px;
-            overflow: hidden;
-            background-color: #0a0e17;
+            background-color: #0b0202;
+            background-image: radial-gradient(#3a0505 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
             padding: 15px;
-            /* Animation Efek Cahaya / Glow Berdenyut */
-            animation: glow 2s infinite alternate;
         }
 
-        @keyframes glow {
-            0% {
-                box-shadow: 0 0 10px rgba(255, 215, 0, 0.4), inset 0 0 5px rgba(255, 215, 0, 0.2);
-            }
-            100% {
-                box-shadow: 0 0 25px rgba(255, 215, 0, 0.8), inset 0 0 15px rgba(255, 215, 0, 0.4);
-            }
-        }
-
-        /* Area Gambar Banner + Efek Sinar Kilat (Shine) */
-        .main-banner-img {
-            position: relative;
+        .container {
+            max-width: 480px;
             width: 100%;
-            display: block;
-            border-radius: 8px;
+        }
+
+        /* Logo Header & Efek Cahaya */
+        .logo-box {
+            text-align: center;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            width: 100%;
             overflow: hidden;
         }
 
-        .main-banner-img::after {
+        .logo-img {
+            max-width: 260px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Efek Cahaya Mengkilap Melintas di Logo */
+        .logo-box::after {
             content: '';
             position: absolute;
             top: -50%;
-            left: -60%;
-            width: 20%;
+            left: -150%;
+            width: 100%;
             height: 200%;
-            background: rgba(255, 255, 255, 0.25);
-            transform: rotate(30deg);
+            background: linear-gradient(
+                60deg, 
+                transparent 30%, 
+                rgba(255, 255, 255, 0.6) 50%, 
+                transparent 70%
+            );
+            transform: rotate(25deg);
             animation: shine 3s infinite;
         }
 
         @keyframes shine {
             0% {
-                left: -60%;
-            }
-            20% {
-                left: 140%;
+                left: -150%;
             }
             100% {
-                left: 140%;
+                left: 150%;
             }
         }
 
-        /* Tombol Daftar Sekarang + Efek Cahaya Emas */
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            background: linear-gradient(180deg, #ffe57f 0%, #ff8c00 100%);
-            padding: 14px 40px;
-            border-radius: 25px;
-            color: #000;
-            text-decoration: none;
+        /* Card Container */
+        .card {
+            background: rgba(20, 5, 5, 0.85);
+            border: 1px solid #331010;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+        }
+
+        /* Banner Frame & Efek Cahaya */
+        .banner-box {
+            border: 2px solid #ffd700;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .banner-box img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Efek Kilau Cahaya di Banner */
+        .banner-box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                transparent
+            );
+            transform: skewX(-25deg);
+            animation: shineBanner 4s infinite;
+        }
+
+        @keyframes shineBanner {
+            0% { left: -100%; }
+            20% { left: 200%; }
+            100% { left: 200%; }
+        }
+
+        .running-text {
+            background: #000;
+            color: #ffd700;
+            font-size: 11px;
+            text-align: center;
+            padding: 4px;
             font-weight: bold;
-            font-size: 18px;
-            border: 2px solid #fff;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
-            text-transform: uppercase;
-            animation: pulse-button 1.5s infinite;
+            position: relative;
+            z-index: 2;
         }
 
-        @keyframes pulse-button {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
-            }
-            50% {
-                transform: scale(1.05);
-                box-shadow: 0 0 25px rgba(255, 215, 0, 1);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
-            }
+        /* Tombol Utama */
+        .btn-group-main {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .btn-main {
+            flex: 1;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            color: #000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-login {
+            background: linear-gradient(180deg, #ffeb3b, #fbc02d);
+        }
+
+        .btn-daftar {
+            background: linear-gradient(180deg, #ff1744, #b71c1c);
+            color: #fff;
+        }
+
+        /* Badge Pills */
+        .pill-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .pill {
+            background: #4a0000;
+            border: 1px solid #7f0000;
+            color: #fff;
+            padding: 8px 4px;
+            border-radius: 20px;
+            font-size: 11px;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Deskripsi & List Fitur */
+        .description {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #ddd;
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .feature-item {
+            background: #111422;
+            border: 1px solid #1a2238;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .feature-item::before {
+            content: "✓";
+            color: #00ff66;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #ff9800;
+            font-weight: bold;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
-    <!-- LOGO ATAS -->
-    <header class="site-header">
-        <div class="header-logo">
-            <amp-img src="logo.png" width="250" height="70" layout="intrinsic" alt="Villa Togel Logo"></amp-img>
-        </div>
-    </header>
+<div class="container">
+    <!-- Header Logo dengan Cahaya Kilau -->
+    <div class="logo-box">
+        <img src="https://i.ibb.co/60pBqTh/villatogel-logo.png" alt="Villatogel Logo" class="logo-img">
+    </div>
 
-    <!-- BANNER DAN TOMBOL -->
-    <main class="banner-container">
-        <!-- Gambar Banner Promo Utama -->
-        <div class="main-banner-img">
-            <amp-img src="e0ce4738b31ffb7c36d8d25641fb6718.jpeg" width="720" height="720" layout="responsive" alt="Situs Slot Togel Resmi"></amp-img>
+    <!-- Main Card -->
+    <div class="card">
+        <!-- Banner Image -->
+        <div class="banner-box">
+            <img src="https://i.ibb.co/3773Jbd/villatogel-banner.jpg" alt="Villatogel Banner">
+            <div class="running-text">VILLATOGEL - HOKI SETIAP HARI, MENANG TIAP SAAT!</div>
         </div>
 
-        <!-- Tombol Daftar -->
-        <a href="https://villamakmur.site/register?referral_code=jp77" class="cta-button" target="_blank" rel="noopener">DAFTAR SEKARANG</a>
-    </main>
+        <!-- Tombol Login & Daftar -->
+        <div class="btn-group-main">
+            <a href="https://villamakmur.site/register?referral_code=jp77" class="btn-main btn-login" target="_blank">LOGIN</a>
+            <a href="https://villamakmur.site/register?referral_code=jp77" class="btn-main btn-daftar" target="_blank">DAFTAR</a>
+        </div>
+
+        <!-- Tag Fitur / Promo -->
+        <div class="pill-grid">
+            <a href="https://villamakmur.site/register?referral_code=jp77" class="pill">Deposit 10k</a>
+            <a href="https://villamakmur.site/register?referral_code=jp77" class="pill">Withdraw 50k</a>
+            <a href="https://villamakmur.site/register?referral_code=jp77" class="pill">Transaksi Cepat</a>
+            <a href="https://villamakmur.site/register?referral_code=jp77" class="pill">Togel Online</a>
+            <a href="https://villamakmur.site/register?referral_code=jp77" class="pill">Slot Gacor</a>
+            <a href="https://villamakmur.site/register?referral_code=jp77" class="pill">Live Casino</a>
+        </div>
+    </div>
+
+    <!-- Description Card -->
+    <div class="card">
+        <p class="description">
+            <strong>VILLATOGEL</strong> hadir sebagai pusat toto togel dan bandar togel online terbesar 2026 di Asia. Dapatkan akses server Indonesia tercepat, aman, dan pastinya hoki setiap hari.
+        </p>
+
+        <div class="section-title">Kenapa Pilih VILLATOGEL</div>
+
+        <div class="feature-grid">
+            <div class="feature-item">Provider Resmi Terpercaya</div>
+            <div class="feature-item">Pelayanan Ramah & Responsif</div>
+            <div class="feature-item">Menyediakan Permainan Lengkap</div>
+            <div class="feature-item">Promo & bonus Melimpah</div>
+            <div class="feature-item">Keamanan Data Terjamin Aman</div>
+            <div class="feature-item">Kemenangan Berapapun Bayar 100%</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        VILLATOGEL By SEO OKEM
+    </div>
+</div>
 
 </body>
 </html>
