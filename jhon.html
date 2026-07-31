@@ -32,7 +32,7 @@
       box-shadow: 0 0 15px rgba(218, 165, 32, 0.2);
     }
 
-    /* ANIMASI CAHAYA BERKEDIP & KILAU (GLOWING & SHIMMER) */
+    /* ANIMASI CAHAYA BERKEDIP & GLOWING */
     @keyframes pulse-glow-gold {
       0% { box-shadow: 0 0 5px #ffd700, inset 0 0 5px #ffd700; }
       50% { box-shadow: 0 0 20px #ffe55c, 0 0 30px #ffae00, inset 0 0 10px #ffffff; }
@@ -50,7 +50,14 @@
       100% { background-position: 200% 0; }
     }
 
-    /* TOP BAR / LIVE CHAT (BERKEDIP) */
+    /* ANIMASI BANK HIDUP (DOT ONLINE BERKEDIP) */
+    @keyframes live-pulse {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); }
+      70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(0, 255, 0, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); }
+    }
+
+    /* TOP BAR / LIVE CHAT */
     .top-bar {
       display: flex;
       justify-content: flex-end;
@@ -69,29 +76,25 @@
       animation: pulse-glow-gold 1.5s infinite alternate, shimmer 3s infinite linear;
     }
 
-    /* LOGO & BANNER VILLATOGEL */
+    /* LOGO & BANNER VILLATOGEL (FILE LOKAL) */
     .logo-container {
       text-align: center;
       margin-bottom: 12px;
     }
-    .logo-text {
-      font-size: 28px;
-      font-weight: 900;
-      background: linear-gradient(180deg, #fff2a3 0%, #ffd700 50%, #b8860b 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
-      letter-spacing: 2px;
+    .logo-container img {
+      max-width: 220px;
+      height: auto;
+      filter: drop-shadow(0px 0px 8px rgba(255, 215, 0, 0.5));
     }
     .banner-container img {
       width: 100%;
       border-radius: 8px;
       border: 2px solid #ffd700;
       margin-bottom: 15px;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
     }
 
-    /* GRID 5 MENU IKON (DENGAN EFEK BERKEDIP/GLOW) */
+    /* GRID 5 MENU IKON */
     .icon-menu-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -119,7 +122,7 @@
       color: #ffd700;
     }
 
-    /* TOMBOL UTAMA (LOGIN RED GLOW & DAFTAR GOLD GLOW) */
+    /* TOMBOL UTAMA (LOGIN & DAFTAR) */
     .action-buttons {
       display: flex;
       flex-direction: column;
@@ -167,7 +170,7 @@
       box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
     }
 
-    /* METODE PEMBAYARAN (BANK & E-WALLET) */
+    /* BANK ANIMASI "HIDUP" */
     .bank-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -183,7 +186,11 @@
       justify-content: space-between;
       padding: 6px 10px;
       height: 42px;
-      box-shadow: 0 0 5px rgba(255, 215, 0, 0.2);
+      box-shadow: 0 0 6px rgba(255, 215, 0, 0.3);
+      transition: transform 0.2s;
+    }
+    .bank-card:hover {
+      transform: scale(1.03);
     }
     .status-badge {
       background: #000;
@@ -194,14 +201,14 @@
       border-radius: 10px;
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
     }
     .status-dot {
-      width: 6px;
-      height: 6px;
+      width: 7px;
+      height: 7px;
       background-color: #00ff00;
       border-radius: 50%;
-      box-shadow: 0 0 5px #00ff00;
+      animation: live-pulse 1.5s infinite;
     }
     .bank-name {
       color: #002244;
@@ -210,7 +217,7 @@
       font-size: 14px;
     }
 
-    /* TABEL INFORMASI SITUS WARNA GOLD */
+    /* TABEL INFORMASI SITUS */
     .info-table-container {
       border: 2px solid #ffd700;
       border-radius: 6px;
@@ -249,42 +256,42 @@
 <body>
 
   <div class="container">
-    <!-- Live Chat Header dengan Cahaya Berkedip Gold -->
+    <!-- Live Chat Header -->
     <div class="top-bar">
-      <a href="https://villamakmur.site/register?referral_code=jp77" class="btn-livechat">LIVE CHAT</a>
+      <a href="https://direct.lc.chat/15198207/" target="_blank" class="btn-livechat">LIVE CHAT</a>
     </div>
 
-    <!-- Logo Villatogel -->
+    <!-- Logo Villatogel dari File Lokal (logo.png) -->
     <div class="logo-container">
-      <div class="logo-text">VILLATOGEL</div>
+      <img src="logo.png" alt="Logo Villatogel" onerror="this.src='logo.jpg'">
     </div>
 
-    <!-- Banner Utama -->
+    <!-- Banner Utama dari File Lokal (banner.jpg) -->
     <div class="banner-container">
-      <img src="https://villatog3l.site/banner.jpg" alt="Banner Villatogel" onerror="this.src='https://via.placeholder.com/460x200/332200/ffd700?text=PASARAN+TOGEL+TERPERCAYA'">
+      <img src="banner.jpg" alt="Banner Villatogel" onerror="this.src='banner.png'">
     </div>
 
-    <!-- Grid 5 Menu Ikon dengan Cahaya Berkedip -->
+    <!-- Grid 5 Menu Ikon dengan Link Khusus -->
     <div class="icon-menu-grid">
-      <a href="https://villamakmur.site/register?referral_code=jp77" class="icon-item">🎯 <span>PREDIKSI TOGEL</span></a>
-      <a href="https://villamakmur.site/register?referral_code=jp77" class="icon-item">🎰 <span>RTP SLOT</span></a>
-      <a href="https://villamakmur.site/register?referral_code=jp77" class="icon-item">🎧 <span>KELUHAN MEMBER</span></a>
-      <a href="https://villamakmur.site/register?referral_code=jp77" class="icon-item">🎁 <span>PROMO</span></a>
-      <a href="https://villamakmur.site/register?referral_code=jp77" class="icon-item">💰 <span>BUKTI JP</span></a>
+      <a href="https://chat.whatsapp.com/L7mVGI2Vl0hKWIKUBxyZNI?s=cl&p=a&ilr=1&amv=3" target="_blank" class="icon-item">🎯 <span>PREDIKSI TOGEL</span></a>
+      <a href="https://heylink.me/Villatogel888" target="_blank" class="icon-item">🎰 <span>RTP SLOT</span></a>
+      <a href="https://direct.lc.chat/15198207/" target="_blank" class="icon-item">🎧 <span>KELUHAN MEMBER</span></a>
+      <a href="https://villamakmur.site/register?referral_code=jp77" target="_blank" class="icon-item">🎁 <span>PROMO</span></a>
+      <a href="https://villamakmur.site/register?referral_code=jp77" target="_blank" class="icon-item">💰 <span>BUKTI JP</span></a>
     </div>
 
-    <!-- Tombol Akses Utama Berkedip (Login & Daftar) -->
+    <!-- Tombol Login & Daftar -->
     <div class="action-buttons">
-      <a href="https://villamakmur.site/register?referral_code=jp77" class="btn-login">LOGIN</a>
-      <a href="https://villamakmur.site/register?referral_code=jp77" class="btn-daftar">DAFTAR</a>
+      <a href="https://villamakmur.site/register?referral_code=jp77" target="_blank" class="btn-login">LOGIN</a>
+      <a href="https://villamakmur.site/register?referral_code=jp77" target="_blank" class="btn-daftar">DAFTAR</a>
     </div>
 
-    <!-- Running Banner Gold -->
+    <!-- Running Banner -->
     <div class="running-banner">
       SELAMAT DATANG DI VILLATOGEL - MIN DEPO Rp 10.000 | MIN WD Rp 50.000
     </div>
 
-    <!-- Grid Metode Pembayaran -->
+    <!-- Grid Pembayaran Bank "Hidup" -->
     <div class="bank-grid">
       <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">BCA</span></div>
       <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">mandiri</span></div>
@@ -314,4 +321,4 @@
   </div>
 
 </body>
-</html>
+  </html>
