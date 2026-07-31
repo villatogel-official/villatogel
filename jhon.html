@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VILLATOGEL - Situs Togel Online Terpercaya</title>
+  <title>VILLATOGEL - Bandar Togel & Slot Online</title>
   <style>
     /* RESET & BASE STYLES */
     * {
@@ -13,8 +13,8 @@
       font-family: Arial, Helvetica, sans-serif;
     }
     body {
-      background-color: #1a0000;
-      background-image: radial-gradient(#4a0000 15%, transparent 16%);
+      background-color: #0d0900;
+      background-image: radial-gradient(#332200 15%, transparent 16%);
       background-size: 20px 20px;
       color: #fff;
       display: flex;
@@ -24,29 +24,49 @@
     }
     .container {
       width: 100%;
-      max-width: 480px; /* Ukuran Tampilan Mobile */
-      background-color: #0d0000;
-      border: 2px solid #8b0000;
+      max-width: 480px;
+      background-color: #080500;
+      border: 2px solid #b8860b;
       min-height: 100vh;
       padding: 10px;
+      box-shadow: 0 0 15px rgba(218, 165, 32, 0.2);
     }
 
-    /* TOP BAR / LIVE CHAT */
+    /* ANIMASI CAHAYA BERKEDIP & KILAU (GLOWING & SHIMMER) */
+    @keyframes pulse-glow-gold {
+      0% { box-shadow: 0 0 5px #ffd700, inset 0 0 5px #ffd700; }
+      50% { box-shadow: 0 0 20px #ffe55c, 0 0 30px #ffae00, inset 0 0 10px #ffffff; }
+      100% { box-shadow: 0 0 5px #ffd700, inset 0 0 5px #ffd700; }
+    }
+
+    @keyframes pulse-glow-red {
+      0% { box-shadow: 0 0 5px #ff0000, inset 0 0 5px #ff0000; }
+      50% { box-shadow: 0 0 20px #ff4d4d, 0 0 30px #ff0000, inset 0 0 10px #ffffff; }
+      100% { box-shadow: 0 0 5px #ff0000, inset 0 0 5px #ff0000; }
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+
+    /* TOP BAR / LIVE CHAT (BERKEDIP) */
     .top-bar {
       display: flex;
       justify-content: flex-end;
       padding: 5px 0 10px 0;
     }
     .btn-livechat {
-      background: #ff0000;
-      color: #fff;
+      background: linear-gradient(90deg, #b8860b, #ffd700, #fff8dc, #ffd700, #b8860b);
+      background-size: 200% 100%;
+      color: #000;
       font-weight: bold;
       padding: 8px 18px;
       border-radius: 8px;
       text-decoration: none;
       font-size: 13px;
-      border: 1px solid #ff4d4d;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+      border: 1px solid #ffffff;
+      animation: pulse-glow-gold 1.5s infinite alternate, shimmer 3s infinite linear;
     }
 
     /* LOGO & BANNER VILLATOGEL */
@@ -54,18 +74,24 @@
       text-align: center;
       margin-bottom: 12px;
     }
-    .logo-container img {
-      max-width: 220px;
-      height: auto;
+    .logo-text {
+      font-size: 28px;
+      font-weight: 900;
+      background: linear-gradient(180deg, #fff2a3 0%, #ffd700 50%, #b8860b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+      letter-spacing: 2px;
     }
     .banner-container img {
       width: 100%;
       border-radius: 8px;
       border: 2px solid #ffd700;
       margin-bottom: 15px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
     }
 
-    /* GRID 5 MENU IKON */
+    /* GRID 5 MENU IKON (DENGAN EFEK BERKEDIP/GLOW) */
     .icon-menu-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -73,8 +99,8 @@
       margin-bottom: 15px;
     }
     .icon-item {
-      background: linear-gradient(180deg, #8b0000, #300000);
-      border: 1px solid #ff3333;
+      background: linear-gradient(180deg, #4a3700, #1a1300);
+      border: 1px solid #ffd700;
       border-radius: 8px;
       text-align: center;
       padding: 8px 2px;
@@ -85,22 +111,24 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      animation: pulse-glow-gold 2s infinite alternate;
     }
     .icon-item span {
       margin-top: 4px;
       line-height: 1.1;
+      color: #ffd700;
     }
 
-    /* TOMBOL AKSI UTAMA (LOGIN & DAFTAR) */
+    /* TOMBOL UTAMA (LOGIN RED GLOW & DAFTAR GOLD GLOW) */
     .action-buttons {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
       margin-bottom: 15px;
     }
     .btn-login {
-      background: linear-gradient(180deg, #ff0000, #990000);
+      background: linear-gradient(90deg, #990000, #ff0000, #ff6666, #ff0000, #990000);
+      background-size: 200% 100%;
       color: #fff;
       font-weight: bold;
       text-align: center;
@@ -108,46 +136,92 @@
       border-radius: 25px;
       text-decoration: none;
       font-size: 18px;
-      border: 1px solid #ff6666;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+      border: 1px solid #ffffff;
+      animation: pulse-glow-red 1.2s infinite alternate, shimmer 2.5s infinite linear;
     }
     .btn-daftar {
-      background: linear-gradient(180deg, #ffd700, #b8860b);
+      background: linear-gradient(90deg, #b8860b, #ffd700, #fff8dc, #ffd700, #b8860b);
+      background-size: 200% 100%;
       color: #000;
-      font-weight: bold;
+      font-weight: 900;
       text-align: center;
       padding: 13px;
       border-radius: 25px;
       text-decoration: none;
       font-size: 18px;
-      border: 1px solid #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+      border: 1px solid #ffffff;
+      animation: pulse-glow-gold 1.2s infinite alternate, shimmer 2.5s infinite linear;
     }
 
-    /* BANNER MARQUEE / RUNNING TEXT */
+    /* RUNNING BANNER */
     .running-banner {
-      background: #700000;
+      background: linear-gradient(180deg, #332400, #1a1200);
       border: 1px solid #ffd700;
       color: #ffd700;
       font-weight: bold;
       font-size: 12px;
       padding: 8px;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       border-radius: 5px;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
     }
 
-    /* TABEL INFORMASI SITUS */
+    /* METODE PEMBAYARAN (BANK & E-WALLET) */
+    .bank-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .bank-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #ffd700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 10px;
+      height: 42px;
+      box-shadow: 0 0 5px rgba(255, 215, 0, 0.2);
+    }
+    .status-badge {
+      background: #000;
+      color: #00ff00;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 3px 6px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      background-color: #00ff00;
+      border-radius: 50%;
+      box-shadow: 0 0 5px #00ff00;
+    }
+    .bank-name {
+      color: #002244;
+      font-weight: 900;
+      font-style: italic;
+      font-size: 14px;
+    }
+
+    /* TABEL INFORMASI SITUS WARNA GOLD */
     .info-table-container {
-      border: 2px solid #ff0000;
+      border: 2px solid #ffd700;
       border-radius: 6px;
       overflow: hidden;
       margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
     }
     .table-header {
-      background: #ff0000;
-      color: #fff;
-      font-weight: bold;
+      background: linear-gradient(180deg, #ffd700, #b8860b);
+      color: #000;
+      font-weight: 900;
       text-align: center;
       padding: 10px;
       font-size: 15px;
@@ -156,40 +230,41 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      background: #000;
+      background: #0a0700;
       color: #fff;
     }
     td {
-      border: 1px solid #333;
+      border: 1px solid #332400;
       padding: 10px;
       font-size: 13px;
     }
     td:first-child {
       font-weight: bold;
       width: 40%;
-      border-right: 1px solid #ff0000;
+      color: #ffd700;
+      border-right: 1px solid #ffd700;
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <!-- Top Bar Live Chat -->
+    <!-- Live Chat Header dengan Cahaya Berkedip Gold -->
     <div class="top-bar">
       <a href="https://villamakmur.site/register?referral_code=jp77" class="btn-livechat">LIVE CHAT</a>
     </div>
 
     <!-- Logo Villatogel -->
     <div class="logo-container">
-      <img src="https://villatog3l.site/logo.png" alt="Logo Villatogel" onerror="this.src='https://via.placeholder.com/220x60/transparent/ffd700?text=VILLATOGEL'">
+      <div class="logo-text">VILLATOGEL</div>
     </div>
 
-    <!-- Banner Utama Villatogel -->
+    <!-- Banner Utama -->
     <div class="banner-container">
-      <img src="https://villatog3l.site/banner.jpg" alt="Banner Villatogel" onerror="this.src='https://via.placeholder.com/460x200/8b0000/ffffff?text=PASARAN+TOGEL+TERPERCAYA'">
+      <img src="https://villatog3l.site/banner.jpg" alt="Banner Villatogel" onerror="this.src='https://via.placeholder.com/460x200/332200/ffd700?text=PASARAN+TOGEL+TERPERCAYA'">
     </div>
 
-    <!-- Grid 5 Menu Ikon -->
+    <!-- Grid 5 Menu Ikon dengan Cahaya Berkedip -->
     <div class="icon-menu-grid">
       <a href="https://villamakmur.site/register?referral_code=jp77" class="icon-item">🎯 <span>PREDIKSI TOGEL</span></a>
       <a href="https://villamakmur.site/register?referral_code=jp77" class="icon-item">🎰 <span>RTP SLOT</span></a>
@@ -198,15 +273,31 @@
       <a href="https://villamakmur.site/register?referral_code=jp77" class="icon-item">💰 <span>BUKTI JP</span></a>
     </div>
 
-    <!-- Tombol Akses Utama (Login & Daftar) -->
+    <!-- Tombol Akses Utama Berkedip (Login & Daftar) -->
     <div class="action-buttons">
       <a href="https://villamakmur.site/register?referral_code=jp77" class="btn-login">LOGIN</a>
       <a href="https://villamakmur.site/register?referral_code=jp77" class="btn-daftar">DAFTAR</a>
     </div>
 
-    <!-- Banner Running Text -->
+    <!-- Running Banner Gold -->
     <div class="running-banner">
-      SELAMAT DATANG DI VILLATOGEL - MIN DEPO Rp 5.000 | MIN WD Rp 50.000
+      SELAMAT DATANG DI VILLATOGEL - MIN DEPO Rp 10.000 | MIN WD Rp 50.000
+    </div>
+
+    <!-- Grid Metode Pembayaran -->
+    <div class="bank-grid">
+      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">BCA</span></div>
+      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">mandiri</span></div>
+      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">BRI</span></div>
+      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">BNI</span></div>
+      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">Danamon</span></div>
+      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">CIMB</span></div>
+      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">Permata</span></div>
+      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name" style="color:#4d0080;">OVO</span></div>
+      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name" style="color:#008cff;">gopay</span></div>
+      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name" style="color:#0055b8;">DANA</span></div>
+      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name" style="color:#e60000;">LinkAja!</span></div>
+      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name" style="color:#000000;">QRIS</span></div>
     </div>
 
     <!-- Tabel Informasi Situs -->
@@ -215,7 +306,7 @@
       <table>
         <tr><td>Nama Situs</td><td>VILLATOGEL</td></tr>
         <tr><td>Metode Deposit</td><td>Transfer Bank, E-Wallet, Scan Qris</td></tr>
-        <tr><td>Minimal Deposit</td><td>Rp. 5.000</td></tr>
+        <tr><td>Minimal Deposit</td><td>Rp. 10.000</td></tr>
         <tr><td>Minimal Withdraw</td><td>Rp. 50.000</td></tr>
         <tr><td>Pelayanan</td><td>Aktif 24 Jam</td></tr>
       </table>
