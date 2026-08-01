@@ -13,9 +13,7 @@
       font-family: Arial, Helvetica, sans-serif;
     }
     body {
-      background-color: #0d0900;
-      background-image: radial-gradient(#332200 15%, transparent 16%);
-      background-size: 20px 20px;
+      background-color: #000000;
       color: #fff;
       display: flex;
       justify-content: center;
@@ -26,72 +24,68 @@
       width: 100%;
       max-width: 480px;
       background-color: #080500;
-      border: 2px solid #b8860b;
+      border: 1px solid #8a6d1c;
       min-height: 100vh;
       padding: 10px;
-      box-shadow: 0 0 15px rgba(218, 165, 32, 0.2);
     }
 
-    /* ANIMASI CAHAYA BERKEDIP & GLOWING */
-    @keyframes pulse-glow-gold {
-      0% { box-shadow: 0 0 5px #ffd700, inset 0 0 5px #ffd700; }
-      50% { box-shadow: 0 0 20px #ffe55c, 0 0 30px #ffae00, inset 0 0 10px #ffffff; }
-      100% { box-shadow: 0 0 5px #ffd700, inset 0 0 5px #ffd700; }
+    /* ANIMASI KEDIP HALUS TANPA SILAU PUTIH */
+    @keyframes soft-glow-gold {
+      0% { box-shadow: 0 0 3px #8a6d1c; }
+      50% { box-shadow: 0 0 8px #b8860b; }
+      100% { box-shadow: 0 0 3px #8a6d1c; }
     }
 
-    @keyframes pulse-glow-red {
-      0% { box-shadow: 0 0 5px #ff0000, inset 0 0 5px #ff0000; }
-      50% { box-shadow: 0 0 20px #ff4d4d, 0 0 30px #ff0000, inset 0 0 10px #ffffff; }
-      100% { box-shadow: 0 0 5px #ff0000, inset 0 0 5px #ff0000; }
+    @keyframes soft-glow-red {
+      0% { box-shadow: 0 0 3px #660000; }
+      50% { box-shadow: 0 0 8px #990000; }
+      100% { box-shadow: 0 0 3px #660000; }
     }
 
-    @keyframes shimmer {
-      0% { background-position: -200% 0; }
-      100% { background-position: 200% 0; }
-    }
-
-    /* ANIMASI BANK HIDUP (DOT ONLINE BERKEDIP) */
     @keyframes live-pulse {
-      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); }
-      70% { transform: scale(1.1); box-shadow: 0 0 0 6px rgba(0, 255, 0, 0); }
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.6); }
+      70% { transform: scale(1.05); box-shadow: 0 0 0 4px rgba(0, 255, 0, 0); }
       100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); }
     }
 
-    /* TOP BAR / LIVE CHAT */
-    .top-bar {
+    /* HEADER: LOGO TEPAT DI POJOK KIRI & LIVE CHAT DI POJOK KANAN */
+    .top-header {
       display: flex;
-      justify-content: flex-end;
-      padding: 5px 0 10px 0;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 0 12px 0;
+      width: 100%;
+    }
+    .logo-left {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .logo-left img {
+      max-width: 130px;
+      height: auto;
+      display: block;
+      margin-left: 0;
     }
     .btn-livechat {
-      background: linear-gradient(90deg, #b8860b, #ffd700, #fff8dc, #ffd700, #b8860b);
-      background-size: 200% 100%;
+      background: linear-gradient(180deg, #d4af37, #8a6d1c);
       color: #000;
       font-weight: bold;
-      padding: 8px 18px;
+      padding: 8px 16px;
       border-radius: 8px;
       text-decoration: none;
       font-size: 13px;
-      border: 1px solid #ffffff;
-      animation: pulse-glow-gold 1.5s infinite alternate, shimmer 3s infinite linear;
+      border: 1px solid #b8860b;
+      animation: soft-glow-gold 2s infinite alternate;
     }
 
-    /* LOGO & BANNER VILLATOGEL (FILE LOKAL) */
-    .logo-container {
-      text-align: center;
-      margin-bottom: 12px;
-    }
-    .logo-container img {
-      max-width: 220px;
-      height: auto;
-      filter: drop-shadow(0px 0px 8px rgba(255, 215, 0, 0.5));
-    }
+    /* BANNER UTAMA */
     .banner-container img {
       width: 100%;
       border-radius: 8px;
-      border: 2px solid #ffd700;
+      border: 1px solid #8a6d1c;
       margin-bottom: 15px;
-      box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+      display: block;
     }
 
     /* GRID 5 MENU IKON */
@@ -102,8 +96,8 @@
       margin-bottom: 15px;
     }
     .icon-item {
-      background: linear-gradient(180deg, #4a3700, #1a1300);
-      border: 1px solid #ffd700;
+      background: linear-gradient(180deg, #2b1f00, #0f0b00);
+      border: 1px solid #8a6d1c;
       border-radius: 8px;
       text-align: center;
       padding: 8px 2px;
@@ -114,12 +108,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      animation: pulse-glow-gold 2s infinite alternate;
+      animation: soft-glow-gold 3s infinite alternate;
     }
     .icon-item span {
       margin-top: 4px;
       line-height: 1.1;
-      color: #ffd700;
+      color: #d4af37;
     }
 
     /* TOMBOL UTAMA (LOGIN & DAFTAR) */
@@ -130,8 +124,7 @@
       margin-bottom: 15px;
     }
     .btn-login {
-      background: linear-gradient(90deg, #990000, #ff0000, #ff6666, #ff0000, #990000);
-      background-size: 200% 100%;
+      background: linear-gradient(180deg, #cc0000, #660000);
       color: #fff;
       font-weight: bold;
       text-align: center;
@@ -139,12 +132,11 @@
       border-radius: 25px;
       text-decoration: none;
       font-size: 18px;
-      border: 1px solid #ffffff;
-      animation: pulse-glow-red 1.2s infinite alternate, shimmer 2.5s infinite linear;
+      border: 1px solid #990000;
+      animation: soft-glow-red 2s infinite alternate;
     }
     .btn-daftar {
-      background: linear-gradient(90deg, #b8860b, #ffd700, #fff8dc, #ffd700, #b8860b);
-      background-size: 200% 100%;
+      background: linear-gradient(180deg, #d4af37, #8a6d1c);
       color: #000;
       font-weight: 900;
       text-align: center;
@@ -152,25 +144,24 @@
       border-radius: 25px;
       text-decoration: none;
       font-size: 18px;
-      border: 1px solid #ffffff;
-      animation: pulse-glow-gold 1.2s infinite alternate, shimmer 2.5s infinite linear;
+      border: 1px solid #b8860b;
+      animation: soft-glow-gold 2s infinite alternate;
     }
 
     /* RUNNING BANNER */
     .running-banner {
-      background: linear-gradient(180deg, #332400, #1a1200);
-      border: 1px solid #ffd700;
-      color: #ffd700;
+      background: #1a1200;
+      border: 1px solid #8a6d1c;
+      color: #d4af37;
       font-weight: bold;
       font-size: 12px;
       padding: 8px;
       text-align: center;
       margin-bottom: 15px;
       border-radius: 5px;
-      box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
     }
 
-    /* BANK ANIMASI "HIDUP" */
+    /* GRID BANK DENGAN LOGO GAMBAR RESMI */
     .bank-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -180,17 +171,12 @@
     .bank-card {
       background: #ffffff;
       border-radius: 12px;
-      border: 1px solid #ffd700;
+      border: 1px solid #8a6d1c;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 6px 10px;
+      padding: 4px 10px;
       height: 42px;
-      box-shadow: 0 0 6px rgba(255, 215, 0, 0.3);
-      transition: transform 0.2s;
-    }
-    .bank-card:hover {
-      transform: scale(1.03);
     }
     .status-badge {
       background: #000;
@@ -201,32 +187,31 @@
       border-radius: 10px;
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
+      flex-shrink: 0;
     }
     .status-dot {
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
       background-color: #00ff00;
       border-radius: 50%;
       animation: live-pulse 1.5s infinite;
     }
-    .bank-name {
-      color: #002244;
-      font-weight: 900;
-      font-style: italic;
-      font-size: 14px;
+    .bank-logo-img {
+      max-height: 24px;
+      max-width: 80px;
+      object-fit: contain;
     }
 
     /* TABEL INFORMASI SITUS */
     .info-table-container {
-      border: 2px solid #ffd700;
+      border: 1px solid #8a6d1c;
       border-radius: 6px;
       overflow: hidden;
       margin-bottom: 20px;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
     }
     .table-header {
-      background: linear-gradient(180deg, #ffd700, #b8860b);
+      background: linear-gradient(180deg, #d4af37, #8a6d1c);
       color: #000;
       font-weight: 900;
       text-align: center;
@@ -237,41 +222,39 @@
     table {
       width: 100%;
       border-collapse: collapse;
-      background: #0a0700;
+      background: #080500;
       color: #fff;
     }
     td {
-      border: 1px solid #332400;
+      border: 1px solid #1f1600;
       padding: 10px;
       font-size: 13px;
     }
     td:first-child {
       font-weight: bold;
       width: 40%;
-      color: #ffd700;
-      border-right: 1px solid #ffd700;
+      color: #d4af37;
+      border-right: 1px solid #8a6d1c;
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <!-- Live Chat Header -->
-    <div class="top-bar">
+    <!-- Header Top: Logo Pojok Kiri & Live Chat Pojok Kanan -->
+    <div class="top-header">
+      <div class="logo-left">
+        <img src="logo.png" alt="Villa Togel Logo" onerror="this.src='logo.jpg'">
+      </div>
       <a href="https://direct.lc.chat/15198207/" target="_blank" class="btn-livechat">LIVE CHAT</a>
     </div>
 
-    <!-- Logo Villatogel dari File Lokal (logo.png) -->
-    <div class="logo-container">
-      <img src="logo.png" alt="Logo Villatogel" onerror="this.src='logo.jpg'">
-    </div>
-
-    <!-- Banner Utama dari File Lokal (banner.jpg) -->
+    <!-- Banner Utama (Diperbarui dengan file UtDBLsPX6ZmCG8Xn7kARF.jpg) -->
     <div class="banner-container">
-      <img src="banner.jpg" alt="Banner Villatogel" onerror="this.src='banner.png'">
+      <img src="UtDBLsPX6ZmCG8Xn7kARF.jpg" alt="Banner Villatogel" onerror="this.src='banner.jpg'">
     </div>
 
-    <!-- Grid 5 Menu Ikon dengan Link Khusus -->
+    <!-- Grid 5 Menu Ikon -->
     <div class="icon-menu-grid">
       <a href="https://chat.whatsapp.com/L7mVGI2Vl0hKWIKUBxyZNI?s=cl&p=a&ilr=1&amv=3" target="_blank" class="icon-item">🎯 <span>PREDIKSI TOGEL</span></a>
       <a href="https://heylink.me/Villatogel888" target="_blank" class="icon-item">🎰 <span>RTP SLOT</span></a>
@@ -291,20 +274,56 @@
       SELAMAT DATANG DI VILLATOGEL - MIN DEPO Rp 10.000 | MIN WD Rp 50.000
     </div>
 
-    <!-- Grid Pembayaran Bank "Hidup" -->
+    <!-- Grid Pembayaran Dengan Logo Gambar Asli Resmi -->
     <div class="bank-grid">
-      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">BCA</span></div>
-      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">mandiri</span></div>
-      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">BRI</span></div>
-      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">BNI</span></div>
-      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">Danamon</span></div>
-      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">CIMB</span></div>
-      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name">Permata</span></div>
-      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name" style="color:#4d0080;">OVO</span></div>
-      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name" style="color:#008cff;">gopay</span></div>
-      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name" style="color:#0055b8;">DANA</span></div>
-      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name" style="color:#e60000;">LinkAja!</span></div>
-      <div class="bank-card"><div class="status-badge"><span class="status-dot"></span>ONLINE</div><span class="bank-name" style="color:#000000;">QRIS</span></div>
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" alt="BCA" class="bank-logo-img">
+      </div>
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Bank_Mandiri_logo_2016.svg" alt="Mandiri" class="bank-logo-img">
+      </div>
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/BRI_2020.svg" alt="BRI" class="bank-logo-img">
+      </div>
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <img src="https://upload.wikimedia.org/wikipedia/id/5/55/BNI_logo.svg" alt="BNI" class="bank-logo-img">
+      </div>
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Danamon.svg" alt="Danamon" class="bank-logo-img">
+      </div>
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/CIMB_Niaga_logo.svg" alt="CIMB" class="bank-logo-img">
+      </div>
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Permata_Bank.svg" alt="Permata" class="bank-logo-img">
+      </div>
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/eb/eb/OVO_Logo.svg" alt="OVO" class="bank-logo-img">
+      </div>
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg" alt="Gopay" class="bank-logo-img">
+      </div>
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Logo_DANA.svg" alt="DANA" class="bank-logo-img">
+      </div>
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/LinkAja.svg" alt="LinkAja" class="bank-logo-img">
+      </div>
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Qris_logo.svg" alt="QRIS" class="bank-logo-img">
+      </div>
     </div>
 
     <!-- Tabel Informasi Situs -->
