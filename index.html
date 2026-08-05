@@ -1,277 +1,435 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villatogel - Pusat Toto Togel Online</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VILLATOGEL - Bandar Togel & Slot Online</title>
+  <style>
+    /* RESET & BASE STYLES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+      background-color: #000000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 100%;
+      max-width: 480px;
+      background-color: #080500;
+      border: 1px solid #8a6d1c;
+      min-height: 100vh;
+      padding: 10px;
+    }
 
-        body {
-            background-color: #0b0202;
-            background-image: radial-gradient(#3a0505 1px, transparent 1px);
-            background-size: 20px 20px;
-            color: #ffffff;
-            display: flex;
-            justify-content: center;
-            padding: 15px;
-        }
+    /* ANIMASI CAHAYA MENGKILAP (SHIMMER EFFECT) */
+    @keyframes shine-sweep {
+      0% {
+        background-position: -200px 0;
+      }
+      100% {
+        background-position: 200px 0;
+      }
+    }
 
-        .container {
-            max-width: 480px;
-            width: 100%;
-        }
+    /* ANIMASI BERKEDIP LAMPU HIJAU ONLINE */
+    @keyframes live-pulse {
+      0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.8); opacity: 1; }
+      50% { transform: scale(1.2); box-shadow: 0 0 6px 2px rgba(0, 255, 0, 0.9); opacity: 0.4; }
+      100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.8); opacity: 1; }
+    }
 
+    /* HEADER: LOGO POJOK KIRI & LIVE CHAT POJOK KANAN */
+    .top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px 0 12px 0;
+      width: 100%;
+    }
+    .logo-left {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo-left img {
+      max-width: 130px;
+      height: auto;
+      display: block;
+      margin-left: 0;
+      /* Efek kilap pada logo */
+      filter: drop-shadow(0 0 2px rgba(212, 175, 55, 0.5));
+    }
     
+    /* TOMBOL LIVE CHAT MENGKILAP */
+    .btn-livechat {
+      background: linear-gradient(110deg, #8a6d1c 0%, #b8860b 35%, #fff 50%, #b8860b 65%, #8a6d1c 100%);
+      background-size: 200px 100%;
+      color: #000;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 13px;
+      border: 1px solid #ffd700;
+      animation: shine-sweep 3s infinite linear;
+    }
+
+    /* BANNER UTAMA */
+    .banner-container img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #8a6d1c;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    /* GRID 5 MENU IKON */
+    .icon-menu-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
+      margin-bottom: 15px;
+    }
+    .icon-item {
+      background: linear-gradient(180deg, #2b1f00, #0f0b00);
+      border: 1px solid #8a6d1c;
+      border-radius: 8px;
+      text-align: center;
+      padding: 8px 2px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 9px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s;
+    }
+    .icon-item:hover {
+      transform: translateY(-2px);
+    }
+    .icon-item span {
+      margin-top: 4px;
+      line-height: 1.1;
+      color: #d4af37;
+    }
+
+    /* TOMBOL UTAMA (LOGIN & DAFTAR) DENGAN EFEK KILAP MET
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+    /* LOGIN - MERAH MENGKILAP */
+.btn-login {
+    background: linear-gradient(110deg, #660000, #ff0000, #660000); /* Sesuaikan gradien warna asli kamu */
+    background-size: 250px 100%;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 12px;       /* Diturunkan dari 13px ke 8px agar tidak terlalu tebal */
+    border-radius: 20px;     /* Disesuaikan agar tetap melengkung pas */
+    text-decoration: none;
+    font-size: 14px;         /* Diturunkan dari 18px ke 14px agar tidak terlalu besar */
+    border: 1px solid #ff3333;
+    animation: shine-sweep 2.5s infinite linear;
 }
 
-.logo-box img {
-    max-height: 40px;
-    width: auto;
-}
-        }
+/* DAFTAR - EMAS MENGKILAP */
+.btn-daftar {
+    background: linear-gradient(110deg, #8a6d1c, #ffd700, #8a6d1c); /* Sesuaikan gradien warna asli kamu */
+    background-size: 250px 100%;
+    color: #000;
+    font-weight: 900;
+    text-align: center;
+    padding: 8px 12px;       /* Diturunkan dari 13px ke 8px */
+    border-radius: 20px;     /* Disesuaikan agar tetap melengkung pas */
+    text-decoration: none;
+    font-size: 14px;         /* Diturunkan dari 18px ke 14px */
+    border: 1px solid #ffd700;
+    animation: shine-sweep 2.5s infinite linear;
+  }
+    
 
-        /* Efek Cahaya Mengkilap Melintas di Logo */
-        .logo-box::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -150%;
-            width: 100%;
-            height: 200%;
-            background: linear-gradient(
-                60deg, 
-                transparent 30%, 
-                rgba(255, 255, 255, 0.6) 50%, 
-                transparent 70%
-            );
-            transform: rotate(25deg);
-            animation: shine 3s infinite;
-        }
+    /* RUNNING BANNER */
+    .running-banner {
+      background: #1a1200;
+      border: 1px solid #8a6d1c;
+      color: #d4af37;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 8px;
+      text-align: center;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
 
-        @keyframes shine {
-            0% {
-                left: -150%;
-            }
-            100% {
-                left: 150%;
-            }
-        }
+    /* GRID BANK DENGAN VECTOR INLINE */
+    .bank-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .bank-card {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #8a6d1c;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4px 10px;
+      height: 42px;
+    }
+    .status-badge {
+      background: #000;
+      color: #00ff00;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 3px 6px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      background-color: #00ff00;
+      border-radius: 50%;
+      animation: live-pulse 1.2s infinite ease-in-out;
+    }
+    .bank-logo-svg {
+      height: 22px;
+      max-width: 85px;
+      display: flex;
+      align-items: center;
+    }
+    .bank-text-fallback {
+      font-weight: 900;
+      font-style: italic;
+      font-size: 15px;
+      letter-spacing: -0.5px;
+    }
 
-        /* Card Container */
-        .card {
-            background: rgba(20, 5, 5, 0.85);
-            border: 1px solid #331010;
-            border-radius: 15px;
-            padding: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
-        }
-
-        /* Banner Frame & Efek Cahaya */
-        .banner-box {
-            border: 2px solid #ffd700;
-            border-radius: 12px;
-            overflow: hidden;
-            margin-bottom: 15px;
-            position: relative;
-        }
-
-        .banner-box img {
-            width: 100%;
-            display: block;
-        }
-
-        /* Efek Kilau Cahaya di Banner */
-        .banner-box::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 60%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.4),
-                transparent
-            );
-            transform: skewX(-25deg);
-            animation: shineBanner 4s infinite;
-        }
-
-        @keyframes shineBanner {
-            0% { left: -100%; }
-            20% { left: 200%; }
-            100% { left: 200%; }
-        }
-
-        .running-text {
-            background: #000;
-            color: #ffd700;
-            font-size: 11px;
-            text-align: center;
-            padding: 4px;
-            font-weight: bold;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Tombol Utama */
-        .btn-group-main {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-
-        .btn-main {
-            flex: 1;
-            padding: 12px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 16px;
-            text-decoration: none;
-            color: #000;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-login {
-            background: linear-gradient(180deg, #ffeb3b, #fbc02d);
-        }
-
-        .btn-daftar {
-            background: linear-gradient(180deg, #ff1744, #b71c1c);
-            color: #fff;
-        }
-
-        /* Badge Pills */
-        .pill-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-        }
-
-        .pill {
-            background: #4a0000;
-            border: 1px solid #7f0000;
-            color: #fff;
-            padding: 8px 4px;
-            border-radius: 20px;
-            font-size: 11px;
-            text-align: center;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        /* Deskripsi & List Fitur */
-        .description {
-            font-size: 13px;
-            line-height: 1.5;
-            color: #ddd;
-            margin-bottom: 15px;
-        }
-
-        .section-title {
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
-
-        .feature-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        .feature-item {
-            background: #111422;
-            border: 1px solid #1a2238;
-            border-radius: 8px;
-            padding: 10px;
-            font-size: 11px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .feature-item::before {
-            content: "✓";
-            color: #00ff66;
-            font-weight: bold;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            font-size: 12px;
-            color: #ff9800;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-    </style>
+    /* TABEL INFORMASI SITUS */
+    .info-table-container {
+      border: 1px solid #8a6d1c;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .table-header {
+      background: linear-gradient(110deg, #8a6d1c 0%, #d4af37 35%, #ffffff 50%, #d4af37 65%, #8a6d1c 100%);
+      background-size: 250px 100%;
+      color: #000;
+      font-weight: 900;
+      text-align: center;
+      padding: 10px;
+      font-size: 15px;
+      letter-spacing: 1px;
+      animation: shine-sweep 3s infinite linear;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #080500;
+      color: #fff;
+    }
+    td {
+      border: 1px solid #1f1600;
+      padding: 10px;
+      font-size: 13px;
+    }
+    td:first-child {
+      font-weight: bold;
+      width: 40%;
+      color: #d4af37;
+      border-right: 1px solid #8a6d1c;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container">
-    <!-- Header Logo dengan Cahaya Kilau -->
-    <div class="logo-box">
-        <img src="logo.png" alt="Logo">
+  <div class="container">
+    <!-- Header Top: Logo Pojok Kiri & Live Chat Pojok Kanan -->
+    <div class="top-header">
+      <div class="logo-left">
+        <img src="logo.png" alt="Villa Togel Logo" onerror="this.src='logo.jpg'">
+      </div>
+      <a href="https://direct.lc.chat/15198207/" target="_blank" class="btn-livechat">LIVE CHAT</a>
     </div>
 
-    <!-- Main Card -->
-    <div class="card">
-        <!-- Banner Image -->
-        <div class="banner-box">
-             <img src="UtDBLsPX6ZmCG8Xn7kARF.jpg" alt="Banner">
-            <div class="running-text">VILLATOGEL - HOKI SETIAP HARI, MENANG TIAP SAAT!</div>
-        </div>
-
-        <!-- Tombol Login & Daftar -->
-        <div class="btn-group-main">
-            <a href="https://https://villatogel234.site/register?referral_code=jp77" class="btn-main btn-login" target="_blank">LOGIN</a>
-            <a href="https://https://villatogel234.site/register?referral_code=jp77" class="btn-main btn-daftar" target="_blank">DAFTAR</a>
-        </div>
-
-        <!-- Tag Fitur / Promo -->
-        <div class="pill-grid">
-            <a href="https://villatogel234.site/register?referral_code=jp77" class="pill">Deposit 10k</a>
-            <a href="https://villatogel234.site/register?referral_code=jp77" class="pill">Withdraw 50k</a>
-            <a href="https://villatogel234.site/register?referral_code=jp77" class="pill">Transaksi Cepat</a>
-            <a href="https://villatogel234.site/register?referral_code=jp77" class="pill">Togel Online</a>
-            <a href="https://villatogel234.site/register?referral_code=jp77" class="pill">Slot Gacor</a>
-            <a href="https://villatogel234.site/register?referral_code=jp77" class="pill">Live Casino</a>
-        </div>
+    <!-- Banner Utama -->
+    <div class="banner-container">
+      <img src="UtDBLsPX6ZmCG8Xn7kARF.jpg" alt="Banner Villatogel" onerror="this.src='banner.jpg'">
     </div>
 
-    <!-- Description Card -->
-    <div class="card">
-        <p class="description">
-            <strong>VILLATOGEL</strong> hadir sebagai pusat bandar togel online terbesar 2026 di Asia. Dapatkan akses server Indonesia tercepat, aman, dan pastinya hoki setiap hari.
-        </p>
+    <!-- Grid 5 Menu Ikon -->
+    <div class="icon-menu-grid">
+      <a href="https://chat.whatsapp.com/L7mVGI2Vl0hKWIKUBxyZNI?s=cl&p=a&ilr=1&amv=3" target="_blank" class="icon-item">🎯 <span>PREDIKSI TOGEL</span></a>
+      <a href="https://heylink.me/Villatogel888" target="_blank" class="icon-item">🎰 <span>RTP SLOT</span></a>
+      <a href="https://direct.lc.chat/15198207/" target="_blank" class="icon-item">🎧 <span>KELUHAN MEMBER</span></a>
+      <a href="https://villamakmur.site/register?referral_code=jp77" target="_blank" class="icon-item">🎁 <span>PROMO</span></a>
+      <a href="https://villamakmur.site/register?referral_code=jp77" target="_blank" class="icon-item">💰 <span>BUKTI JP</span></a>
+    </div>
 
-        <div class="section-title">Kenapa Pilih VILLATOGEL</div>
+    <!-- Tombol Login & Daftar Mengkilap -->
+    <div class="action-buttons">
+      <a href="https://villamakmur.site/register?referral_code=jp77" target="_blank" class="btn-login">LOGIN</a>
+      <a href="https://villamakmur.site/register?referral_code=jp77" target="_blank" class="btn-daftar">DAFTAR</a>
+    </div>
 
-        <div class="feature-grid">
-            <div class="feature-item">Provider Resmi Terpercaya</div>
-            <div class="feature-item">Pelayanan Ramah & Responsif</div>
-            <div class="feature-item">Menyediakan Permainan Lengkap</div>
-            <div class="feature-item">Promo & bonus Melimpah</div>
-            <div class="feature-item">Keamanan Data Terjamin Aman</div>
-            <div class="feature-item">Kemenangan Berapapun Bayar 100%</div>
+    <!-- Running Banner -->
+    <div class="running-banner">
+      
+    </div>
+
+    <!-- Grid Pembayaran SVG -->
+    <div class="bank-grid">
+      <!-- BCA -->
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <div class="bank-logo-svg">
+          <svg viewBox="0 0 100 32" width="75" height="24">
+            <rect width="100" height="32" rx="4" fill="#00529C"/>
+            <path d="M12 8 C12 8 8 16 12 24 C16 24 24 20 22 16 C20 12 12 8 12 8 Z" fill="#FFFFFF"/>
+            <text x="32" y="22" fill="#FFFFFF" font-family="Arial" font-weight="900" font-style="italic" font-size="18">BCA</text>
+          </svg>
         </div>
+      </div>
+      
+      <!-- MANDIRI -->
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <div class="bank-logo-svg">
+          <svg viewBox="0 0 110 32" width="80" height="24">
+            <text x="0" y="22" fill="#003D79" font-family="Arial" font-weight="900" font-style="italic" font-size="16">mandırı</text>
+            <path d="M72 8 Q85 4 95 12 Q82 12 72 8 Z" fill="#F2A900"/>
+            <path d="M78 14 Q90 10 100 18 Q88 18 78 14 Z" fill="#F2A900"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- BRI -->
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <div class="bank-logo-svg">
+          <svg viewBox="0 0 100 32" width="75" height="24">
+            <rect width="22" height="22" x="0" y="5" fill="#00529C" rx="3"/>
+            <text x="4" y="22" fill="#FFFFFF" font-family="Arial" font-weight="900" font-size="15">BRI</text>
+            <text x="28" y="23" fill="#00529C" font-family="Arial" font-weight="900" font-style="italic" font-size="20">BRI</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- BNI -->
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <div class="bank-logo-svg">
+          <svg viewBox="0 0 90 32" width="70" height="24">
+            <path d="M0 6 L12 24 L20 6 Z" fill="#F15A24"/>
+            <text x="22" y="23" fill="#00529C" font-family="Arial" font-weight="900" font-style="italic" font-size="21">BNI</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- DANAMON -->
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <div class="bank-logo-svg">
+          <span class="bank-text-fallback" style="color: #002D62;">Danamon</span>
+        </div>
+      </div>
+
+      <!-- CIMB NIAGA -->
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <div class="bank-logo-svg">
+          <svg viewBox="0 0 110 32" width="80" height="24">
+            <polygon points="0,8 14,16 0,24" fill="#7A0000"/>
+            <text x="18" y="21" fill="#7A0000" font-family="Arial" font-weight="900" font-size="14">CIMB</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- PERMATA -->
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <div class="bank-logo-svg">
+          <span class="bank-text-fallback" style="color: #00843D;">Permata</span>
+        </div>
+      </div>
+
+      <!-- OVO -->
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <div class="bank-logo-svg">
+          <span class="bank-text-fallback" style="color: #4C2A86; font-size: 18px;">OVO</span>
+        </div>
+      </div>
+
+      <!-- GOPAY -->
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <div class="bank-logo-svg">
+          <svg viewBox="0 0 90 32" width="70" height="24">
+            <circle cx="10" cy="16" r="7" fill="#00AED6"/>
+            <circle cx="10" cy="16" r="3" fill="#FFFFFF"/>
+            <text x="22" y="22" fill="#00AED6" font-family="Arial" font-weight="900" font-size="16">gopay</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- DANA -->
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <div class="bank-logo-svg">
+          <span class="bank-text-fallback" style="color: #108EE9; font-size: 18px;">DANA</span>
+        </div>
+      </div>
+
+      <!-- LINKAJA -->
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <div class="bank-logo-svg">
+          <span class="bank-text-fallback" style="color: #ED1C24;">LinkAja!</span>
+        </div>
+      </div>
+
+      <!-- QRIS -->
+      <div class="bank-card">
+        <div class="status-badge"><span class="status-dot"></span>ONLINE</div>
+        <div class="bank-logo-svg">
+          <span class="bank-text-fallback" style="color: #000000; font-size: 18px;">QRIS</span>
+        </div>
+      </div>
     </div>
 
-    <div class="footer">
-        VILLATOGEL By : MANG OKEM
+    <!-- Tabel Informasi Situs -->
+    <div class="info-table-container">
+      <div class="table-header">INFORMASI SITUS</div>
+      <table>
+        <tr><td>Nama Situs</td><td>VILLATOGEL</td></tr>
+        <tr><td>Metode Deposit</td><td>Transfer Bank, E-Wallet, Scan Qris</td></tr>
+        <tr><td>Minimal Deposit</td><td>Rp. 10.000</td></tr>
+        <tr><td>Minimal Withdraw</td><td>Rp. 50.000</td></tr>
+        <tr><td>Pelayanan</td><td>Aktif 24 Jam</td></tr>
+      </table>
     </div>
-</div>
+  </div>
 
 </body>
-                </html>
+    </html>
